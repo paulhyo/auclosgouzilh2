@@ -1,5 +1,8 @@
 # Auclosgouzilh2
 
+node version: 4.4.6 
+npm  version: 3.10.9
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server
