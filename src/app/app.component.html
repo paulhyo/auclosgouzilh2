@@ -1,3 +1,55 @@
-<h1>
-  {{title}}
-</h1>
+<!--<h1>{{title}}</h1>
+<alert type="success">hello</alert>
+<nav>
+  <a routerLink="" routerLinkActive="active">Home</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+</nav>
+<router-outlet></router-outlet>-->
+
+
+<div id="head" class="container container-main">
+  <header>
+    <div class="clearfix">
+      <a href="./" title="Der Titel" class="brand hidden-xs">
+        <img src="assets/img/logo-CH.svg" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch">
+        <h1>
+          Eidgenössisches Justiz- und Polizeidepartement<br>
+          Informatik Service Center<br><br>
+          example-smallapp-angular2
+        </h1>
+      </a>
+    </div>
+
+  </header>
+
+  <nav id="main-navigation" class="navbar nav-main">
+    <div class="container">
+      <div class="navbar">
+        <ul class="nav navbar-nav">
+          <li><a [routerLink]=" ['./home'] ">Home</a></li>
+          <li><a [routerLink]=" ['./contact'] ">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="main" class="container container-main">
+
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+
+    <footer>
+      <address>
+        <div class="row">
+          <div class="col-md-6">&copy; 2016 ISC-EJPD</div>
+          <div class="col-md-6">
+            <div class="pull-right">
+              Version:&nbsp;0.0.1
+            </div>
+          </div>
+        </div>
+      </address>
+    </footer>
+  </div>
+</div>
