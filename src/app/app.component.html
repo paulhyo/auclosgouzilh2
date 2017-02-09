@@ -1,14 +1,5 @@
-<!--<h1>{{title}}</h1>
-<alert type="success">hello</alert>
-<nav>
-  <a routerLink="" routerLinkActive="active">Home</a>
-  <a routerLink="/contact" routerLinkActive="active">Contact</a>
-</nav>
-<router-outlet></router-outlet>-->
-
-
 <div id="head" class="container container-main">
-  <header>
+  <!--<header>
     <div class="clearfix">
       <a href="./" title="Der Titel" class="brand hidden-xs">
         <img src="assets/img/logo-CH.svg" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch">
@@ -20,14 +11,25 @@
       </a>
     </div>
 
-  </header>
+  </header>-->
 
   <nav id="main-navigation" class="navbar nav-main">
     <div class="container">
       <div class="navbar">
         <ul class="nav navbar-nav">
-          <li><a [routerLink]=" ['./home'] ">Home</a></li>
-          <li><a [routerLink]=" ['./contact'] ">Contact</a></li>
+          <li><a [routerLink]=" ['./home'] ">{{ 'NAV.home' | translate }}</a></li>
+          <li><a [routerLink]=" ['./presentation'] ">{{ 'NAV.presentation' | translate }}</a></li>
+          <li><a [routerLink]=" ['./rooms'] ">{{ 'NAV.rooms' | translate }}</a></li>
+          <li><a [routerLink]=" ['./gallery'] ">{{ 'NAV.gallery' | translate }}</a></li>
+          <li><a [routerLink]=" ['./activities'] ">{{ 'NAV.activities' | translate }}</a></li>
+          <li><a [routerLink]=" ['./visit'] ">{{ 'NAV.visit' | translate }}</a></li>
+          <li><a [routerLink]=" ['./contact'] ">{{ 'NAV.contact' | translate }}</a></li>
+          <li><a [routerLink]=" ['./admin'] ">{{ 'NAV.admin' | translate }}</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a (click)="selectLang('fr')">FR</a></li>
+          <li><a (click)="selectLang('de')">DE</a></li>
+          <li><a (click)="selectLang('en')">EN</a></li>
         </ul>
       </div>
     </div>
@@ -35,7 +37,8 @@
 
   <div id="main" class="container container-main">
 
-    <div class="row">
+    <router-outlet></router-outlet>
+    <!--<div class="row">
       <router-outlet></router-outlet>
     </div>
 
@@ -50,6 +53,6 @@
           </div>
         </div>
       </address>
-    </footer>
+    </footer>-->
   </div>
 </div>

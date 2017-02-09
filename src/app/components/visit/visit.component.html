@@ -1,0 +1,36 @@
+<div class="col-md-6 col-md-offset-3">
+
+  <div class="carousel">
+    <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+      <slide *ngFor="let slide of slides; let index=index"
+             [active]="slide.active">
+        <img [src]="slide.image" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+  <div class="row row-content row-content-visit">
+    <tabset *ngIf="visits.length > 0">
+      <tab *ngFor="let visit of visits"
+           [heading]="visit.title"
+           [active]="visit.active"
+           (select)="visit.active = true"
+           (deselect)="visit.active = false"
+           [disabled]="visit.disabled">
+        <div class="accordeon">
+          <accordion [closeOthers]="oneAtATime">
+            <accordion-group *ngFor="let todo of visit.todos" [heading]="todo.what">
+              <p class="angular-with-newlines">{{todo.notes}}</p>
+              <p *ngIf="todo.link">{{"VISIT.source" | translate}}: <a target="_blank" href="{{ todo.link }}">{{ todo.link }}</a></p>
+            </accordion-group>
+          </accordion>
+        </div>
+      </tab>
+    </tabset>
+  </div>
+
+</div>

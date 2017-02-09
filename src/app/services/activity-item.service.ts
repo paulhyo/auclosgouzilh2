@@ -1,0 +1,58 @@
+import { Injectable }     from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import {Observable} from 'rxjs/Rx';
+import {Activity} from "../models/activity";
+import {Logger} from "angular2-logger/core";
+import {Configuration} from "../app.constants";
+import {ActivityItem} from "../models/activity-item";
+
+@Injectable()
+export class ActivityItemService {
+
+  private activityItemUrl: string;
+  private activityItemCrudUrl: string;
+  public token: string;
+
+  constructor(
+    private http: Http,
+    private _logger: Logger,
+    private _configuration: Configuration) {
+    this.activityItemUrl = _configuration.RestServerWithApiUrl + 'activityItem.php';
+    this.activityItemCrudUrl = _configuration.RestServerWithApiUrl + 'crud.php/activity_item';
+    // http://localhost:8888/php/crud.php/{$table}/{$id}
+  }
+
+  getActivityItemsByActivityId(activityId: number) : Observable<ActivityItem[]>{
+    return this.http.get(`${this.activityItemUrl}?activityId=${activityId}`)
+      .map((res:Response) => res.json())
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+
+  }
+
+  addActivityItem (body: Object): Observable<ActivityItem[]> {
+    let bodyString = JSON.stringify(body); // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+
+    return this.http.post(this.activityItemCrudUrl, body, options) // ...using post request
+      .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+
+  updateActivityItem (body: Object): Observable<ActivityItem[]> {
+    let bodyString = JSON.stringify(body); // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+
+    return this.http.put(`${this.activityItemCrudUrl}/${body['id']}`, body, options) // ...using put request
+      .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+
+  removeActivityItem (id:string): Observable<ActivityItem[]> {
+    return this.http.delete(`${this.activityItemCrudUrl}/${id}`) // ...using put request
+      .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+      .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+}
+

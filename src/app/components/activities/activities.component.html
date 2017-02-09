@@ -1,0 +1,37 @@
+<div class="col-md-6 col-md-offset-3">
+
+  <div class="carousel">
+    <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+      <slide *ngFor="let slide of slides; let index=index"
+             [active]="slide.active">
+        <img [src]="slide.image" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+  <div class="row row-content row-content-activities">
+    <tabset *ngIf="activities.length > 0">
+      <tab *ngFor="let activity of activities"
+           [heading]="activity.title"
+           [active]="activity.active"
+           (select)="activity.active = true"
+           (deselect)="activity.active = false"
+           [disabled]="activity.disabled">
+        <div class="accordeon">
+          <accordion [closeOthers]="oneAtATime">
+            <accordion-group *ngFor="let todo of activity.todos" [heading]="todo.what">
+              <p class="angular-with-newlines">{{todo.notes}}</p>
+              <p *ngIf="todo.link">{{"ACTIVITIES.source" | translate}}: <a target="_blank" href="{{ todo.link }}">{{ todo.link }}</a></p>
+              <p *ngIf="todo.source">{{"ACTIVITIES.source" | translate}}: {{ todo.source }}</p>
+            </accordion-group>
+          </accordion>
+        </div>
+      </tab>
+    </tabset>
+  </div>
+
+</div>

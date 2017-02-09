@@ -1,0 +1,31 @@
+{
+  "NAV": {
+    "home": "Accueil",
+    "presentation": "Présentation",
+    "rooms": "Chambres",
+    "activities": "Activités",
+    "visit": "A visiter",
+    "gallery": "Galerie Photo",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "SELECT": "Changer la langue"
+  },
+  "PRESENTATION": {
+    "title": "Soyez notre hôte Au Clos Gouzilh !",
+    "text1": "Cette maison de caractère se situe à Saint-Aigulin, village le plus à l'Est du département de la Charente-Maritime, en Haute Saintonge, aux portes du Périgord, de la Gironde et de la Charente – point de départ idéal pour découvrir en un ou plusieurs jours des régions marquées par un large patrimoine culturel, archéologique, historique et gastronomique.",
+    "text2": "Le soir venu, vous continuerez à rêver au calme dans une de nos chambres d'hôtes situées près des vignes et si vous le souhaitez, simplement partager une assiette gourmande avec vos hôtes Brigitte et Pascal."
+  },
+  "CONTACT": {
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Email": "Email",
+    "InvalidEmail": "Enter a valid email address",
+    "Message": "Your Message",
+    "InfoMail": "Do you want to receive information?",
+    "SendMessage": "Send"
+  }
+}
+

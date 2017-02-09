@@ -1,0 +1,23 @@
+.carousel {
+  background: #1a237e;
+  width: 800px;
+}
+.carousel .item {
+  height: 200px;
+}
+.carousel .item img {
+  left: 0;
+  min-height: 200px;
+  position: absolute;
+  top: 0;
+}
+
+.row-content-activities {
+  margin: 0px auto;
+  padding: 10px 0px;
+  min-height: 200px;
+}
+
+.angular-with-newlines {
+  white-space: pre-wrap;
+}

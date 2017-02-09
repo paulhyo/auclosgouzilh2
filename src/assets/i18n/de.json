@@ -1,0 +1,30 @@
+{
+  "NAV": {
+    "home": "Startseite",
+    "presentation": "Präsentation",
+    "rooms": "Zimmer",
+    "activities": "Aktivitäten",
+    "visit": "Ausflüge",
+    "gallery": "Foto-Galerie",
+    "contact": "Kontakt",
+    "admin": "Admin"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "SELECT": "Sprache wechslen"
+  },
+  "PRESENTATION": {
+    "title": "Seien Sie unser Gast im Clos Gouzilh !",
+    "text1": "Dieses charaktervolle Haus liegt in Saint-Aigulin am äussersten Ostzipfel des Departements der Charente-Maritime, in der Haute Saintonge, an der Pforte zum Périgord, Gironde und Charente – idealer Ausgangspunkt die von einem breiten Kulturerbe gezeichneten Regionen zu erkunden: archäologisch, historisch und gastronomisch.",
+    "text2": "Danach lassen Sie ihre Seele baumeln in unserem Gästehaus. Machen Sie es sich bequem, erholen Sie sich und träumen Sie von weiteren schönen Entdeckungen. Ihre Gastgeber Brigitte und Pascal bereiten Ihnen gerne einen schlemmerhaften Teller mit regionalen Produkten zu."
+  },
+  "CONTACT": {
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "Email": "Email",
+    "InvalidEmail": "Enter a valid email address",
+    "Message": "Your Message",
+    "InfoMail": "Do you want to receive information?",
+    "SendMessage": "Send"
+  }
+}

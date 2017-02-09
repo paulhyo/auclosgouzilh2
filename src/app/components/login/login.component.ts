@@ -1,37 +1,39 @@
-/*import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
-})
-export class LoginComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}*/
-
-
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Logger } from "angular2-logger/core";
 
-import { UserService } from "../../services/user.service";
+import { AuthenticationService } from "../../services/authentication.service";
 
 @Component({
   selector: 'login',
-  template: `...`
+  templateUrl: './login.component.html',
 })
-export class LoginComponent {
-  constructor(private userService: UserService, private router: Router) {}
+export class LoginComponent implements OnInit {
 
-  onSubmit(email, password) {
-    this.userService.login(email, password).subscribe((result) => {
-      if (result) {
-        this.router.navigate(['']);
-      }
-    });
+  model: any = {};
+  loading = false;
+  error = '';
+
+  constructor(
+    private authenticationService: AuthenticationService,
+    private router: Router,
+    private _logger: Logger) {}
+
+  ngOnInit() {
+    // reset login status
+    this.authenticationService.logout();
+  }
+
+  login() {
+    this.loading = true;
+    this.authenticationService.login(this.model.username, this.model.password)
+      .subscribe(result => {
+        if (result === true) {
+          this.router.navigate(['/admin']);
+        } else {
+          this.error = 'Username or password is incorrect';
+          this.loading = false;
+        }
+      });
   }
 }
