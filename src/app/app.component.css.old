@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+.container {
+  width: 1400px;
+  background: #F3F781;
+}
+
+/* File upload default style verbergen, stattdessen wird der style des umschliessenden span genommen */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+fieldset {
+  margin-bottom: 2em;
+}
+
+
+/* Sprache Umschaltmenue */
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+/* Navigation */
+.nav .dropdown {
+  margin-left: 0;
+}
+
+.nav .dropdown-menu {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav .dropdown-menu li {
+  display: block;
+}
+
+.navbar {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.nav-main {
+  background: #e4e4e4;
+  background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 39%, #dddddd 79%, #d5d5d5 91%, #cfcfcf 95%, #bebebe 99%);
+  height: 50px;
+  border-top: 5px solid #DC0018;
+}
+
+.nav-main .nav {
+  /* isc-ejpd */
+  /*margin: 0 1.6em;*/
+  margin: 0 15px;
+  border-left: 1px solid #b8b8b8;
+}
+
+.nav-main .nav > li {
+  border-right: 1px solid #b8b8b8;
+  border-left: 1px solid #FFFFFF;
+}
+
+.nav-main .nav > li > a {
+  /* isc-ejpd */
+  /*height: 70px;*/
+  height: 45px;
+  background: #e8e8e8;
+  background: linear-gradient(to top, #e8e8e8 0%, #f7f7f7 61%, #f7f7f7 89%, #f5f5f5 91%, #ececec 95%, #d7d7d7 100%);
+  color: #454545;
+  /*font-size: 0.8em;*/
+  line-height: 1.2;
+  padding: 10px 9px;
+}
+
+.nav-main .nav > li > a > i {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-main .nav > li > a:hover, .nav-main .nav > li > a.selected-menu, .nav-main .dropdown-menu li > a:hover {
+  color: #DC0018;
+  background: #dbdbdb;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkxJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: linear-gradient(to bottom, #f4f4f4 0%, #ffffff 10%, #ffffff 79%, #ffffff 91%, #dbdbdb 100%);
+  border: none;
+}
+
+.nav-services {
+  font-size: 0.85em;
+  padding-top: 5px;
+  /* isc-ejpd */
+  float: right;
+}
+
+.nav-lang li {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-lang a {
+  color: #454545;
+  padding: 4px;
+}
+
+.nav-lang a:hover {
+  color: #006699;
+}
+
+.nav-lang a.active {
+  background: #E5E5E5;
+}
+
+/* Container */
+.container-main {
+  padding: 0;
+  background: #FFFFFF;
+  margin-top: 0;
+}
+
+#head.container-main {
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.6);
+}
+
+#main.container-main>.row {
+  padding: 0 5px 0 5px;
+}
+
+#head.container-main address .row {
+  padding: 0 5px 0 5px;
+}
+
+
+.control-label.control-label-left {
+  text-align: left;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+  font-size: 42px;
+}
+
+table.transtable {
+  table-layout: fixed;
+  width: 100%;
+}
+
+table.transtable td.transkey {
+  overflow: hidden;
+  word-break: break-all;
+}
+
+table.transtable td.transvalue {
+  overflow: hidden;
+}
+
+.alerts {
+  position: fixed;
+  top: 50px;
+  max-width: 1100px;
+  min-width: 1100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  z-index: 999;
+}
+
+.splash {
+  display: none;
+}
+
+.container > header {
+  margin: 5px;
+}
+
+#contextTitle {
+  float: left;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  /* isc-ejpd */
+  margin-bottom: 1em;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  background: #F3F781;
+}
+
+.form-horizontal input[type="radio"], .form-horizontal input[type="checkbox"] {
+  min-height: 34px;
+}
+
+input[type="file"] {
+  width: 6.3em;
+  height: 1.5em;
+  margin: 5px;
+}
+
+input[multiple] {
+  width: 6.2em;
+}
+
+.sel-file {
+  padding: 1px 5px;
+  font-size: smaller;
+  color: grey;
+}
+
+.response {
+  padding-top: 30px;
+}
+
+.response > ul {
+  list-style-type: decimal;
+}
+
+.response li, .response .reqh {
+  color: blue;
+  font-size: smaller;
+  padding-bottom: 5px;
+}
+
+.progress {
+  display: inline-block;
+  width: 100px;
+  border: 3px groove #CCC;
+}
+
+.progress div {
+  font-size: smaller;
+  background: orange;
+  width: 0;
+}
+
+.drop-box {
+  background: #F8F8F8;
+  border: 5px dashed #DDD;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  padding: 5px;
+}
+
+.drop-box.dragover {
+  border: 5px dashed blue;
+}
+
+/* for IE*/
+.js-fileapi-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  padding: 1px 5px;
+  font-size: smaller;
+  /*margin: 0 3px;*/
+}
+
+/*.ng-v {*/
+/*float: right;*/
+/*}*/
+
+.sel-file img {
+  float: left;
+  width: 18px;
+  height: 18px;
+  padding-right: 10px;
+}
+
+.sub {
+  font-size: smaller;
+  color: #777;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.brand img {
+  max-width: 400px;
+  height: auto;
+  margin: 0;
+  padding-right: 2em;
+  border-right: 1px solid #E5E5E5;
+  float: left;
+}
+
+.brand h1 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1em;
+  /* isc-ejpd: damit isc-ejpd auf eine Zeile passt */
+  /*max-width: 310px;*/
+  max-width: 400px;
+  line-height: 1.3;
+  margin: 0;
+  padding-left: 2.5em;
+  float: left;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid #D5D5D5;
+  background: #F5F5F5;
+  margin-top: 20px;
+}
+
+address {
+  display: table-cell;
+  width: 10000px;
+  border-top: 1px solid #FFFFFF;
+  margin-bottom: 0;
+  padding: 10px 0px;
+}
+
+/*body, .body {
+  background: url('/assets/img/bg-striped.png') repeat;
+}*/
+
+
+
+
+

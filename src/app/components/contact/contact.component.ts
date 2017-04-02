@@ -7,7 +7,7 @@ import {ContactService} from "../../services/contact.service";
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  //styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
 
@@ -34,8 +34,9 @@ export class ContactComponent implements OnInit {
           this.displayMessage = true;
           setTimeout(() => {
             this.displayMessage = false;
+            this.submitted = false;
+            //this.feedback = new Feedback('', '', '', '');
             form.reset();
-            this.feedback = new Feedback('', '', '', '');
           }, 3000);
         } else {
           this.error = 'Send Email failed';

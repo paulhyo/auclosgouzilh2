@@ -43,10 +43,10 @@ export class ActivitiesComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    console.log("ActivitiesComponent.ngOnInit: loadVisits");
+    //console.log("ActivitiesComponent.ngOnInit: loadActivities");
     this.loadActivities();
     this.langSubscription = this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
-      console.log("ActivitiesComponent.onLangChange: loadVisits");
+      //console.log("ActivitiesComponent.onLangChange: loadActivities");
       this.loadActivities();
     });
   }

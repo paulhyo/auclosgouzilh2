@@ -14,7 +14,8 @@ export class ContactService {
     private http: Http,
     private _logger: Logger,
     private _configuration: Configuration) {
-    this.emailUrl = _configuration.RestServerUrl + 'email.php';
+    //this.emailUrl = _configuration.RestServerUrl + 'email.php';
+    this.emailUrl = '/php/email.php';
   }
 
   sendEmail (body): Observable<boolean> {

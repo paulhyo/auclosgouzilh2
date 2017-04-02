@@ -4,6 +4,7 @@ import {Logger} from "angular2-logger/core";
 import {Configuration} from "../app.constants";
 import {Observable} from "rxjs";
 import {Image} from "../models/image";
+import { AuthHttp } from 'angular2-jwt';
 
 @Injectable()
 export class GalleryService {
@@ -14,10 +15,13 @@ export class GalleryService {
 
   constructor(
     private http: Http,
+    public authHttp: AuthHttp,
     private _logger: Logger,
     private _configuration: Configuration) {
-    this.listImageUrl = _configuration.RestServerUrl + 'list_images.php';
-    this.removeImageUrl = _configuration.RestServerUrl + 'remove_image.php';
+    //this.listImageUrl = _configuration.RestServerUrl + 'list_images.php';
+    //this.removeImageUrl = _configuration.RestServerUrl + 'remove_image.php';
+    this.listImageUrl = '/php/list_images.php';
+    this.removeImageUrl = '/php/remove_image.php';
   }
 
   listImages() : Observable<Image[]>{
@@ -28,11 +32,10 @@ export class GalleryService {
 
 
   removeImage (body: Object): Observable<Image[]> {
-    let bodyString = JSON.stringify(body); // Stringify payload
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
 
-    return this.http.post(this.removeImageUrl, body, options) // ...using post request
+    return this.authHttp.post(this.removeImageUrl, body, options) // ...using post request
       .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }

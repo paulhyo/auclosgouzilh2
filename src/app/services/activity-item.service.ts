@@ -1,10 +1,11 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-import {Activity} from "../models/activity";
 import {Logger} from "angular2-logger/core";
 import {Configuration} from "../app.constants";
 import {ActivityItem} from "../models/activity-item";
+import { AuthHttp } from 'angular2-jwt';
+
 
 @Injectable()
 export class ActivityItemService {
@@ -15,11 +16,13 @@ export class ActivityItemService {
 
   constructor(
     private http: Http,
+    public authHttp: AuthHttp,
     private _logger: Logger,
     private _configuration: Configuration) {
-    this.activityItemUrl = _configuration.RestServerWithApiUrl + 'activityItem.php';
-    this.activityItemCrudUrl = _configuration.RestServerWithApiUrl + 'crud.php/activity_item';
-    // http://localhost:8888/php/crud.php/{$table}/{$id}
+    //this.activityItemUrl = _configuration.RestServerWithApiUrl + 'activityItem.php';
+    //this.activityItemCrudUrl = _configuration.RestServerWithApiUrl + 'crud.php/activity_item';
+    this.activityItemUrl = '/php/api/activityItem.php';
+    this.activityItemCrudUrl = '/php/api/crud.php/activity_item';
   }
 
   getActivityItemsByActivityId(activityId: number) : Observable<ActivityItem[]>{
@@ -30,27 +33,25 @@ export class ActivityItemService {
   }
 
   addActivityItem (body: Object): Observable<ActivityItem[]> {
-    let bodyString = JSON.stringify(body); // Stringify payload
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
 
-    return this.http.post(this.activityItemCrudUrl, body, options) // ...using post request
+    return this.authHttp.post(this.activityItemCrudUrl, body, options) // ...using post request
       .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
   updateActivityItem (body: Object): Observable<ActivityItem[]> {
-    let bodyString = JSON.stringify(body); // Stringify payload
     let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers }); // Create a request option
 
-    return this.http.put(`${this.activityItemCrudUrl}/${body['id']}`, body, options) // ...using put request
+    return this.authHttp.put(`${this.activityItemCrudUrl}/${body['id']}`, body, options) // ...using put request
       .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
   removeActivityItem (id:string): Observable<ActivityItem[]> {
-    return this.http.delete(`${this.activityItemCrudUrl}/${id}`) // ...using put request
+    return this.authHttp.delete(`${this.activityItemCrudUrl}/${id}`) // ...using put request
       .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
       .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }

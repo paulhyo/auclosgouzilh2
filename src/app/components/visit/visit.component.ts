@@ -27,12 +27,12 @@ export class VisitComponent implements OnInit, OnDestroy {
   },
   {
     id: 1,
-    image: 'assets/img/visit_bordeaux2.png',
+    image: 'assets/img/visit_bordeaux.png',
     text: 'Bordeaux'
   },
   {
     id: 2,
-    image: 'assets/img/visit_jonzac2.png',
+    image: 'assets/img/visit_jonzac.png',
     text: 'Jonzac'
   }
 ];

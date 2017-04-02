@@ -1,21 +1,19 @@
 <div id="head" class="container container-main">
-  <!--<header>
-    <div class="clearfix">
-      <a href="./" title="Der Titel" class="brand hidden-xs">
-        <img src="assets/img/logo-CH.svg" alt="The Federal Authorities of the Swiss Confederation, www.admin.ch">
-        <h1>
-          Eidgenössisches Justiz- und Polizeidepartement<br>
-          Informatik Service Center<br><br>
-          example-smallapp-angular2
-        </h1>
-      </a>
-    </div>
 
-  </header>-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
 
-  <nav id="main-navigation" class="navbar nav-main">
-    <div class="container">
-      <div class="navbar">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" [routerLink]=" ['./home'] ">auclosgouzilh</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a [routerLink]=" ['./home'] ">{{ 'NAV.home' | translate }}</a></li>
           <li><a [routerLink]=" ['./presentation'] ">{{ 'NAV.presentation' | translate }}</a></li>
@@ -27,32 +25,17 @@
           <li><a [routerLink]=" ['./admin'] ">{{ 'NAV.admin' | translate }}</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a (click)="selectLang('fr')">FR</a></li>
-          <li><a (click)="selectLang('de')">DE</a></li>
-          <li><a (click)="selectLang('en')">EN</a></li>
+          <li><a class="language" (click)="selectLang('fr')">FR</a></li>
+          <li><a class="language" (click)="selectLang('de')">DE</a></li>
+          <li><a class="language" (click)="selectLang('en')">EN</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+
   <div id="main" class="container container-main">
-
     <router-outlet></router-outlet>
-    <!--<div class="row">
-      <router-outlet></router-outlet>
-    </div>
-
-    <footer>
-      <address>
-        <div class="row">
-          <div class="col-md-6">&copy; 2016 ISC-EJPD</div>
-          <div class="col-md-6">
-            <div class="pull-right">
-              Version:&nbsp;0.0.1
-            </div>
-          </div>
-        </div>
-      </address>
-    </footer>-->
   </div>
 </div>
+

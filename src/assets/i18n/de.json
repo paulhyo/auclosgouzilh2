@@ -18,13 +18,47 @@
     "text1": "Dieses charaktervolle Haus liegt in Saint-Aigulin am äussersten Ostzipfel des Departements der Charente-Maritime, in der Haute Saintonge, an der Pforte zum Périgord, Gironde und Charente – idealer Ausgangspunkt die von einem breiten Kulturerbe gezeichneten Regionen zu erkunden: archäologisch, historisch und gastronomisch.",
     "text2": "Danach lassen Sie ihre Seele baumeln in unserem Gästehaus. Machen Sie es sich bequem, erholen Sie sich und träumen Sie von weiteren schönen Entdeckungen. Ihre Gastgeber Brigitte und Pascal bereiten Ihnen gerne einen schlemmerhaften Teller mit regionalen Produkten zu."
   },
+  "ROOMS": {
+    "RoomInfo.title": "Nützliche Informationen",
+    "RoomInfo1": "Gourmetteller ab 20 € pro Gast",
+    "RoomInfo2": "Kugelspiel",
+    "RoomInfo3": "Geschlossener Parkplatz",
+    "RoomInfo4": "Garage für Motorräder",
+    "RoomInfo5": "Unser Gästehaus ist für Personen mit eingeschränkter Mobilität nicht geeignet",
+    "RoomInfo6": "Auf Wunsch und zur allgemeinen Zufriedenheit unserer Gäste, können wir keine Tiere aufnehmen",
+    "RoomInfo7": "Barzahlung bei Ankunft oder Banküberweisung vor Anreise",
+    "RoomGouzilh": "Zimmer Gouzilh",
+    "RoomRigalleau": "Zimmer Rigalleau",
+    "RoomGouzilhText1": "Freundliches, helles Zimmer",
+    "RoomGouzilhText2": "Bett 160 x 200 cm",
+    "RoomGouzilhText3": "Private Dusche mit WC",
+    "RoomGouzilhText4": "Preis ",
+    "RoomGouzilhText5": " / Nacht für 2 Gäste",
+    "RoomGouzilhText6": "Frühstück offeriert",
+    "RoomRigalleauText1": "Freundliches, helles Zimmer",
+    "RoomRigalleauText2": "Bett 160 x 200 cm",
+    "RoomRigalleauText3": "Private Dusche mit WC",
+    "RoomRigalleauText4": "Preis ",
+    "RoomRigalleauText5": " / Nacht für 2 Gäste",
+    "RoomRigalleauText6": "Frühstück offeriert"
+  },
+  "GALLERY": {
+    "Gallery": "Foto-Galerie"
+  },
+  "ACTIVITIES": {
+    "title": "Entdecken Sie den Charme, das rege Treiben und die Offenheit der Charente-Maritime und der anliegenden Departemente.\n\nRechtzeitig am richtigen Platz !",
+    "source": "Quelle"
+  },
+  "VISIT": {
+    "source": "Quelle"
+  },
   "CONTACT": {
-    "FirstName": "First Name",
-    "LastName": "Last Name",
-    "Email": "Email",
-    "InvalidEmail": "Enter a valid email address",
-    "Message": "Your Message",
-    "InfoMail": "Do you want to receive information?",
-    "SendMessage": "Send"
+    "FirstName": "Vorname",
+    "LastName": "Name",
+    "Email": "E-Mail",
+    "InvalidEmail": "Geben sie eine gültige E-Mail-Adresse an",
+    "Message": "Ihre Nachricht",
+    "InfoMail": "Möchten Sie Informationen erhalten?",
+    "SendMessage": "Senden"
   }
 }

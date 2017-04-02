@@ -10,6 +10,8 @@ import { Logger } from "angular2-logger/core";
 export class AppComponent {
   title = 'app works!';
 
+  //isCollapsed = true;
+
   constructor(
     private translate: TranslateService,
     private _logger: Logger) {
@@ -35,4 +37,5 @@ export class AppComponent {
     console.log("selectLang: " + lang);
     this.translate.use(lang);
   }
+
 }

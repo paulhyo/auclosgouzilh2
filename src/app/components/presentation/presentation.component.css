@@ -1,0 +1,20 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(assets/fonts/Ayuthaya.ttf);
+
+}
+
+.row-content-presentation {
+  margin-bottom: 20px;
+  /*style: "margin-top: 50px";
+  font-family: myFirstFont;
+  font-weight: bold;
+  font-size: 140%;*/
+}
+
+.img {
+  display: block;
+  margin: auto;
+  /*width: 40%;*/
+}
+

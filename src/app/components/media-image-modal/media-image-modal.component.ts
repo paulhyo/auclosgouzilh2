@@ -13,7 +13,7 @@ import {Component, Input,Output,ElementRef,EventEmitter,OnInit} from '@angular/c
      <a class="nav-left" *ngIf="modalImages.length >1" (click)="prevImage()"><i class="fa fa-angle-left"></i></a>
      <img *ngIf="!loading" src="{{imgSrc}}" (click)="nextImage()" class="effect" />
      <a class="nav-right" *ngIf="modalImages.length >1" (click)="nextImage()"><i class="fa fa-angle-right"></i></a>
-     <span class="info-text">{{ currentImageIndex + 1 }}/{{ modalImages.length }} - Image {{currentImageIndex+1}}</span>
+     <span class="info-text">{{ currentImageIndex + 1 }}/{{ modalImages.length }} - {{imgDescription}}</span>
    </div>
    </div>
        `,
@@ -23,6 +23,7 @@ export class MediaImageModalComponent implements OnInit {
   public _element:any;
   public opened:boolean = false;
   public imgSrc:string;
+  public imgDescription:string;
   public currentImageIndex:number;
   public loading:boolean= false;
   public showRepeat:boolean= false;
@@ -71,6 +72,7 @@ export class MediaImageModalComponent implements OnInit {
     for (var i = 0; i < this.modalImages.length; i++) {
       if (i === this.currentImageIndex ) {
         this.imgSrc = this.modalImages[i].img;
+        this.imgDescription = this.modalImages[i].description;
         this.loading = false;
         break;
       }

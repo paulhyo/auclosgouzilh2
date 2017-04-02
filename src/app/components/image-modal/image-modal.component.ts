@@ -17,7 +17,7 @@ import {Image} from "../../models/image";
      <a class="nav-left" *ngIf="modalImages.length >1" (click)="prevImage()"><i class="fa fa-angle-left"></i></a>
      <img *ngIf="!loading" src="{{imgSrc}}" (click)="nextImage()" class="effect" />
      <a class="nav-right" *ngIf="modalImages.length >1" (click)="nextImage()"><i class="fa fa-angle-right"></i></a>
-     <span class="info-text">{{ currentImageIndex + 1 }}/{{ modalImages.length }} - Image {{currentImageIndex+1}}</span>
+     <span class="info-text">{{ currentImageIndex + 1 }}/{{ modalImages.length }}</span>
    </div>
    </div>
        `,

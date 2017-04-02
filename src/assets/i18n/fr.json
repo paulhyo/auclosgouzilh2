@@ -18,14 +18,48 @@
     "text1": "Cette maison de caractère se situe à Saint-Aigulin, village le plus à l'Est du département de la Charente-Maritime, en Haute Saintonge, aux portes du Périgord, de la Gironde et de la Charente – point de départ idéal pour découvrir en un ou plusieurs jours des régions marquées par un large patrimoine culturel, archéologique, historique et gastronomique.",
     "text2": "Le soir venu, vous continuerez à rêver au calme dans une de nos chambres d'hôtes situées près des vignes et si vous le souhaitez, simplement partager une assiette gourmande avec vos hôtes Brigitte et Pascal."
   },
+  "ROOMS": {
+    "RoomInfo.title": "Informations utiles",
+    "RoomInfo1": "Assiette gourmande dès 20€ par hôte",
+    "RoomInfo2": "Pétanque",
+    "RoomInfo3": "Parking extérieur fermé",
+    "RoomInfo4": "Garage pour moto",
+    "RoomInfo5": "Notre maison d’hôte n’est pas adaptée aux personnes à mobilité réduite",
+    "RoomInfo6": "Pour la tranquillité de nos hôtes, nos amis les animaux ne sont pas admis",
+    "RoomInfo7": "Paiement comptant à l’arrivée ou par virement avant l’arrivée",
+    "RoomGouzilh": "Chambre Gouzilh",
+    "RoomRigalleau": "Chambre Rigalleau",
+    "RoomGouzilhText1": "Chambre accueillante et lumineuse",
+    "RoomGouzilhText2": "Lit de 160 x 200 cm",
+    "RoomGouzilhText3": "Salle d'eau/WC privatifs",
+    "RoomGouzilhText4": "Prix ",
+    "RoomGouzilhText5": " / nuit pour 2 hôtes",
+    "RoomGouzilhText6": "Petit déjeuner offert",
+    "RoomRigalleauText1": "Chambre accueillante et lumineuse",
+    "RoomRigalleauText2": "Lit de 160 x 200 cm",
+    "RoomRigalleauText3": "Salle d'eau/WC privatifs",
+    "RoomRigalleauText4": "Prix ",
+    "RoomRigalleauText5": " / nuit pour 2 hôtes",
+    "RoomRigalleauText6": "Petit déjeuner offert"
+  },
+  "GALLERY": {
+    "Gallery": "Galerie Photo"
+  },
+  "ACTIVITIES": {
+    "title": "La Charente-Maritime et ses départements avoisinants regorgent de vivacité et d'animation.\n\nAu bon moment, au bon endroit !",
+    "source": "Source"
+  },
+  "VISIT": {
+    "source": "Source"
+  },
   "CONTACT": {
-    "FirstName": "First Name",
-    "LastName": "Last Name",
-    "Email": "Email",
-    "InvalidEmail": "Enter a valid email address",
-    "Message": "Your Message",
-    "InfoMail": "Do you want to receive information?",
-    "SendMessage": "Send"
+    "FirstName": "Prénom",
+    "LastName": "Nom",
+    "Email": "E-Mail",
+    "InvalidEmail": "Entrez une adresse e-mail valide",
+    "Message": "Votre message",
+    "InfoMail": "Voulez-vous recevoir des informations?",
+    "SendMessage": "Envoyer"
   }
 }
 

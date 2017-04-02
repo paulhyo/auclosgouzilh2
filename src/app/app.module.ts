@@ -61,6 +61,7 @@ import {VisitItemService} from "./services/visit-item.service";
 import { GalleryAdminComponent } from './components/gallery-admin/gallery-admin.component';
 import {GalleryService} from "./services/gallery.service";
 import {ContactService} from "./services/contact.service";
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -104,6 +105,7 @@ import {ContactService} from "./services/contact.service";
       useFactory: (createTranslateLoader),
       deps: [Http]
     }),
+    AuthModule,
     //InMemoryWebApiModule.forRoot(InMemoryDataService),
     AlertModule.forRoot(),
     AccordionModule.forRoot(),

@@ -7,8 +7,6 @@ import {Configuration} from "../../app.constants";
 import {GalleryService} from "../../services/gallery.service";
 import {Image} from "../../models/image";
 
-const URL = 'http://localhost:8888/php/upload2.php'
-
 @Component({
   selector: 'gallery-admin',
   templateUrl: './gallery-admin.component.html',
@@ -29,7 +27,8 @@ export class GalleryAdminComponent implements OnInit {
     private http: Http,
     private _configuration: Configuration,
     private galleryService: GalleryService) {
-      this.apiEndPoint = _configuration.RestServerUrl + 'upload2.php';
+      //this.apiEndPoint = _configuration.RestServerUrl + 'upload2.php';
+      this.apiEndPoint = 'php/upload2.php';
       this.uploader = new FileUploader({url: this.apiEndPoint});
       this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
         //console.log("ImageUpload:uploaded:", item, status);

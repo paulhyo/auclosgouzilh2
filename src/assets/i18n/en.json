@@ -18,6 +18,40 @@
     "text1": "This house full of character is situated in Saint-Aigulin at the extreme east corner of the department of the Charente-Maritime, in High Saintonge, gateway to Périgord, Gironde and Charente – ideal starting point to discover in one or several days regions marked by a large cultural -  archaeologically, historically and gastronomic - heritage.",
     "text2": "In the evening, you’ll relax in our guesthouse and dream about other nice discoveries. If you wish it, your hosts Brigitte and Pascal may prepare you a gourmet plate with regional products."
   },
+  "ROOMS": {
+    "RoomInfo.title": "Useful information",
+    "RoomInfo1": "Gourmet plate from 20€ per guest",
+    "RoomInfo2": "Petanque",
+    "RoomInfo3": "Closed outdoor parking",
+    "RoomInfo4": "Garage for motorcycle",
+    "RoomInfo5": "Our guest house is not suitable for people with reduced mobility",
+    "RoomInfo6": "For the general satisfaction and tranquillity of our guests, our friends, the pets are not allowed",
+    "RoomInfo7": "Cash on arrival or bank transfer before arrival",
+    "RoomGouzilh": "Room Gouzilh",
+    "RoomRigalleau": "Room Rigalleau",
+    "RoomGouzilhText1": "Friendly and bright room",
+    "RoomGouzilhText2": "Bed 160 x 200 cm",
+    "RoomGouzilhText3": "Private shower/WC",
+    "RoomGouzilhText4": "Price ",
+    "RoomGouzilhText5": " / night for 2 guests",
+    "RoomGouzilhText6": "breakfast offered",
+    "RoomRigalleauText1": "Friendly and bright room",
+    "RoomRigalleauText2": "Bed 160 x 200 cm",
+    "RoomRigalleauText3": "Private shower/WC",
+    "RoomRigalleauText4": "Price ",
+    "RoomRigalleauText5": " / night for 2 guests",
+    "RoomRigalleauText6": "breakfast offered"
+  },
+  "GALLERY": {
+    "Gallery": "Photo Gallery"
+  },
+  "ACTIVITIES": {
+    "title": "Discover the charm, liveliness and openness of the Charente-Maritime and its neighbouring departments.\n\nAt the right time, at the right place !",
+    "source": "Source"
+  },
+  "VISIT": {
+    "source": "Source"
+  },
   "CONTACT": {
     "FirstName": "First Name",
     "LastName": "Last Name",

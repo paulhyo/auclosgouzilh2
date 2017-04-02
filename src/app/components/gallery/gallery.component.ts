@@ -13,10 +13,6 @@ export class GalleryComponent implements OnInit {
 
   openModalWindow:boolean=false;
   imagePointer:number;
-  /*images = [
-    { thumb: 'assets/img/chambre_gouzilh_1_mini.png', img: 'assets/img/chambre_gouzilh_1.png', description: 'Image 1' },
-    { thumb: 'assets/img/chambre_gouzilh_2_mini.png', img: 'assets/img/chambre_gouzilh_2.png', description: 'Image 2' }
-  ];*/
 
   // Local properties
   images: Image[];
